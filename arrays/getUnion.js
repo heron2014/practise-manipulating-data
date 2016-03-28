@@ -23,6 +23,20 @@ var arr1 = intersectionArr.map(function(item) {
     return item.skill;
 })
 
+//USING REDUCE 
+
+var arr = contactObj.reduce(function (acc, obj){
+    
+    if (searchSkills.indexOf(obj.skill) > -1) {
+        acc.push(obj.skill);
+    }
+    
+    return acc;
+}, [])
+
+
+console.log('my reduce', arr);
+
 
 function notIn(obj, arr) {
     
